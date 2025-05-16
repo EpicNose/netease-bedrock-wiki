@@ -18,7 +18,7 @@
 2.	克隆派生
 ```bash
 # 克隆项目到本地（注意是派生项目的链接，不是原始项目）
-git checkout -b https://github.com/your-user-name/your-fork-name.git
+git clone https://github.com/your-user-name/your-fork-name.git
 ```
 
 3.	创建分支
