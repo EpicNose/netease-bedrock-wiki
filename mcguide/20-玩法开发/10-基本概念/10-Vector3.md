@@ -296,6 +296,72 @@ c = Vector3.Cross(a, b)
 
 ## 成员方法
 
+### x
+
+- 描述
+
+  返回该向量的x坐标值。
+
+- 返回值
+
+  | 数据类型 | 说明            |
+  | :------- | :-------------- |
+  | float    | 该向量x的坐标值 |
+
+- 示例
+
+```python
+from common.utils.mcmath import Vector3
+a = Vector3(3.0, 4.0, 0.0)
+print a.x # 打印 3.0
+```
+
+
+
+### y
+
+- 描述
+
+  返回该向量的y坐标值。
+
+- 返回值
+
+  | 数据类型 | 说明            |
+  | :------- | :-------------- |
+  | float    | 该向量y的坐标值 |
+
+- 示例
+
+```python
+from common.utils.mcmath import Vector3
+a = Vector3(3.0, 4.0, 0.0)
+print a.y # 打印 4.0
+```
+
+
+
+### z
+
+- 描述
+
+  返回该向量的z坐标值。
+
+- 返回值
+
+  | 数据类型 | 说明            |
+  | :------- | :-------------- |
+  | float    | 该向量z的坐标值 |
+
+- 示例
+
+```python
+from common.utils.mcmath import Vector3
+a = Vector3(3.0, 4.0, 0.0)
+print a.z # 打印 0.0
+```
+
+
+
 ### Length
 
 - 描述
