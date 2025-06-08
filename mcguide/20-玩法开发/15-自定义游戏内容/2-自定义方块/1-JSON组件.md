@@ -34,11 +34,11 @@ time: 分钟
 
 ## description
 
-| 键                      | 类型 | 默认值 | 解释                                                                             |
-| ----------------------- | ---- | ------ | -------------------------------------------------------------------------------- |
-| identifier              | str  |        | 包括命名空间及物品名。需要全局唯一。建议使用mod名称作为命名空间              |
-| register_to_create_menu | bool | false  | 是否注册到创造栏                                                                 |
-| category                | str  | Nature | 注册到创造栏的分类，可选的值有：ConstructionNatureEquipmentItems |
+| 键                      | 类型 | 默认值 | 解释                                                         |
+| ----------------------- | ---- | ------ | ------------------------------------------------------------ |
+| identifier              | str  |        | 包括命名空间及物品名。需要全局唯一。建议使用mod名称作为命名空间 |
+| register_to_create_menu | bool | false  | 是否注册到创造栏                                             |
+| category                | str  | Nature | 注册到创造栏的分类，可选的值有：<br/>Construction<br/>Nature<br/>Equipment<br/>Items |
 
 ## components
 
@@ -178,9 +178,9 @@ time: 分钟
 
 |       键       |  类型  | 默认值 | 解释                                                                                                                                                                                                                                               |
 | :-------------: | :----: | :----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     digger     | string |        | 必须设置。表示方块使用此工具挖掘时有速度加成。可选的值有：    shovel：铲    pickaxe：镐    hatchet：斧    hoe：锄                                                                                                              |
+|     digger     | string |        | 必须设置。表示方块使用此工具挖掘时有速度加成。<br/>可选的值有：    <br/>shovel：铲    <br/>pickaxe：镐    <br/>hatchet：斧    <br/>hoe：锄                                                                                     |
 | destroy_special |  bool  | false | 可选。当设置为true时，表示只有使用digger设置的工具进行挖掘才会产生掉落物。                                                                                                                                                                     |
-|      level      |  int  |   0   | 可选。当destroy_special为true时才会生效。表示挖掘所需的工具等级，若手持工具等级小于该值，则不会产生掉落物。原版工具的等级：    空手/其他非工具物品：0    木制/金制工具：0    石制工具：1    铁制工具：2    钻石工具：3 |
+|      level      |  int  |   0   | 可选。当destroy_special为true时才会生效。表示挖掘所需的工具等级，若手持工具等级小于该值，则不会产生掉落物。<br/>原版工具的等级：   <br/>空手/其他非工具物品：0<br/>木制/金制工具：0<br/>石制工具：1  <br/>铁制工具：2 <br/>钻石工具：3 |
 
 <span id="netease_aabb"></span>
 
@@ -246,9 +246,9 @@ time: 分钟
 
 可参考[CustomBlocksMod](../../13-模组SDK编程/60-Demo示例.md#CustomBlocksMod)的customblocks:customblocks_model_flower方块。
 
-| 键    | 类型   | 默认值 | 解释                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ----- | ------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| value | string |        | 目前支持的材质有：opaque：不透明，即“terrain_opaque”材质。默认为此项alpha：全透明，即“terrain_alpha”材质，如火焰，该材质用于异形方块，用在方块类上但与其他方块重合时会出现闪烁，可以使用no_crop_face_block组件避免闪烁。blend：半透明，即“terrain_blend”材质，如彩色玻璃。optionalAlpha：局部透明，与alpha不同，alpha超过一定距离将不渲染，而optionalAlpha不会，能配合no_crop_face_block组件实现原版叶子效果。 |
+| 键    | 类型   | 默认值 | 解释                                                         |
+| ----- | ------ | ------ | ------------------------------------------------------------ |
+| value | string |        | 目前支持的材质有：<br>opaque：不透明，即“terrain_opaque”材质。默认为此项<br/>alpha：全透明，即“terrain_alpha”材质，如火焰，该材质用于异形方块，用在方块类上但与其他方块重合时会出现闪烁，可以使用no_crop_face_block组件避免闪烁。<br/>blend：半透明，即“terrain_blend”材质，如彩色玻璃。<br/>optionalAlpha：局部透明，与alpha不同，alpha超过一定距离将不渲染，而optionalAlpha不会，能配合no_crop_face_block组件实现原版叶子效果。 |
 
 <span id="netease_solid"></span>
 
@@ -284,11 +284,11 @@ time: 分钟
 
 可参考[CustomBlocksMod](../../13-模组SDK编程/60-Demo示例.md#CustomBlocksMod)的customblocks:customblocks_test_block_entity方块。
 
-| 键          | 类型 | 默认值 | 解释                                                                                                                                                        |
-| ----------- | ---- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tick        | bool | false  | 为true时，当玩家进入方块tick范围时，该方块每秒会发送**20次**ServerBlockEntityTickEvent事件为false时，该方块不会发送ServerBlockEntityTickEvent事件       |
-| client_tick | bool | false  | 为true时，当玩家进入方块tick范围时，该方块每秒会发送**20次**ModBlockEntityTickClientEvent事件为false时，该方块不会发送ModBlockEntityTickClientEvent事件 |
-| movable     | bool | true   | 为true时，该方块可被粘性活塞拉回为false时，该方块不可被粘性活塞拉回                                                                                     |
+| 键          | 类型 | 默认值 | 解释                                                         |
+| ----------- | ---- | ------ | ------------------------------------------------------------ |
+| tick        | bool | false  | 为true时，当玩家进入方块tick范围时，该方块每秒会发送**20次**ServerBlockEntityTickEvent事件<br/>为false时，该方块不会发送ServerBlockEntityTickEvent事件 |
+| client_tick | bool | false  | 为true时，当玩家进入方块tick范围时，该方块每秒会发送**20次**ModBlockEntityTickClientEvent事件<br/>为false时，该方块不会发送ModBlockEntityTickClientEvent事件 |
+| movable     | bool | true   | 为true时，该方块可被粘性活塞拉回为false时，该方块不可被粘性活塞拉回 |
 
 <span id="netease_random_tick"></span>
 
@@ -333,9 +333,9 @@ time: 分钟
 
 目前该属性只用于[netease:aabb](#netease_aabb)及[自定义方块模型](./5-自定义方块模型.md)的is_connect查询：
 
-| 名称             | 解释                                                                                                                                                    |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| query.is_connect | 传入一个参数，返回该方块与对应临面上的方块是否有connection属性参数取值与对应的面：0-down面，1-up面，2-north面，3-south面，4-west面，5-east面。 |
+| 名称             | 解释                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| query.is_connect | 传入一个参数，返回该方块与对应临面上的方块是否有connection属性参数取值与对应的面：<br/>0-down面，<br/>1-up面，<br/>2-north面，<br/>3-south面，<br/>4-west面，<br/>5-east面。 |
 
 <span id="netease_redstone"></span>
 
@@ -349,7 +349,7 @@ time: 分钟
 
 | 键       | 类型 | 默认值 | 说明                                                       |
 | -------- | ---- | ------ | ---------------------------------------------------------- |
-| type     | str  |        | 红石类型：producer：红石源consumer：红石机械元件 |
+| type     | str  |        | 红石类型：<br/>producer：红石源<br/>consumer：红石机械元件 |
 | strength | int  | 15     | 红石信号值，范围[0,15]                                     |
 
 <span id="listen_block_remove"></span>
