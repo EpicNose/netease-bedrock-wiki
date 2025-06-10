@@ -498,6 +498,18 @@ time: 分钟
 | mute               | bool | true   | 是否关闭箱子开启与关闭时的音效                                                             |
 | can_be_blocked     | bool | false  | 是否能被阻挡，即箱子上面有阻挡的方块时能否打开箱子                                         |
 
+<span id="block_container"></span>
+
+### netease:block_container
+
+[自定义容器](./3-特殊方块/11-自定义容器.md)组件，使用时需要将base_block设为netease_container。相比[netease:block_chest](#netease-block-chest)，该组件支持使用资源包UI Json配置方块打开后的UI界面，方便开发者制作自定义熔炉等界面，而无需考虑复杂的交互逻辑，数据同步逻辑等。
+
+| 键                 | 类型 | 默认值 | 解释                                       |
+| ------------------ | ---- | ----- | ------------------------------------------ |
+| custom_description | str  |       | 容器ui打开时的title（复用原版ui时生效）       |
+| screen_name        | str  |       | 交互方块时打开的ui，形如namespace.screenName |
+| container_size     | int  |       | 方块容器能够存放的物品槽位数量，取值范围1-108，需与ui槽位匹配。若ui槽位大于配置容量，超过配置的部分无法放入物品；若ui槽位小于配置容量，按shift可放入，但无法在ui中显示 |
+
 <span id="no_crop_face_block"></span>
 
 ### netease:no_crop_face_block
