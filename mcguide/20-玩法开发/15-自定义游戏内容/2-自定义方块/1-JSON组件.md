@@ -301,6 +301,22 @@ time: 分钟
 | enable         | bool | false  | 方块是否随机tick                                                                                                                                         |
 | tick_to_script | bool | false  | 是否发送事件 BlockRandomTickServerEvent 到python脚本 |
 
+### netease:block_animate_random_tick
+
+频率更高的方块tick，用于实现类似樱花树叶的方块特效。给自定义方块配置该组件后，开发者可以在**客户端**监听<a href="../../../../mcdocs/1-ModAPI-beta/事件/方块.html#blockanimaterandomtickevent" rel="noopenner"> BlockAnimateRandomTickEvent </a>事件给方块附加逻辑。
+
+| 键           | 类型  | 默认值 | 解释   |
+| ------------ | ----- | ------ | ------ |
+| trigger_rate | float | 0.1    | 触发率 |
+| send_event | bool | true    | 触发BlockAnimateRandomTickEvent事件 |
+
+该组件采用了和原版樱花树叶/末地烛相同的逻辑，支持无需方块实体即可tick，且性能开销低。不建议在事件里将数据传给服务端，因为每个玩家客户端tick到的方块都是随机的，可能相同也可能不同。
+
+**方块离玩家越近，触发频率越大**，当方块距离玩家16个方块以内时，如果设置trigger_rate为1，几乎每秒都能触发，原版樱花树叶的触发率为0.1，约等于总是10%的概率触发落叶。随着方块离玩家越远，触发几率也会递减。最大触发距离为32-40格，32是玩家静止不动时的值，玩家移动时，最多可能有8个方块距离的偏移。
+
+**设备性能越好，触发频率越大**，游戏引擎会记录帧耗时，超时的tick不会触发Python事件，避免大量方块同时tick导致卡顿。
+
+
 ### netease:redstone_property
 
 用于给自定义方块设置红石属性
@@ -497,7 +513,6 @@ time: 分钟
 | is_shulker_box     | bool | false  | 是否为潜影盒箱子，如果开启摧毁方块将不会掉落，与原版潜影盒功能相同，无法与隔壁箱子进行组合 |
 | mute               | bool | true   | 是否关闭箱子开启与关闭时的音效                                                             |
 | can_be_blocked     | bool | false  | 是否能被阻挡，即箱子上面有阻挡的方块时能否打开箱子                                         |
-
 <span id="block_container"></span>
 
 ### netease:block_container
@@ -537,4 +552,3 @@ time: 分钟
 | 键    | 类型 | 默认值   | 解释           |
 | ----- | ---- | -------- | -------------- |
 | value | str  | 物品名称 | 物品的描述信息 |
-

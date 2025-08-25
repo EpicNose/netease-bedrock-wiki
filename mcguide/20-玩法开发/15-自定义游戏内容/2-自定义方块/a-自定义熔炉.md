@@ -1,5 +1,5 @@
 ---
-front: 
+front:
 hard: 入门
 time: 分钟
 ---
@@ -178,6 +178,6 @@ time: 分钟
    4. `UpdateCustomContainer()`，该函数会在右键打开自定义容器以及发生相关交换物品操作时调用，用于更新自定义容器除物品槽以外的其他状态信息，比如自定义熔炉通过该函数更新燃烧状态及燃烧动画，并通过modConfig.OnCustomContainerChangedEvent该事件通知客户端调用`UpdateCustomContainerUI()`去更新自定义容器的UI，传的参数可由开发者自定义
 
    5. `OnCustomContainerItemSwap()`，该函数会在自定义容器和背包之间发生物品交换的时候调用，之前的槽位名约定就是用于此处分辨是哪个容器的物品。需要在该函数中返回False表示禁止交换，如果返回True允许交换需要先调用`SpawnItemToPlayerInv()`或`SetInvItemNum()`更新对应背包槽位的物品，同时更新blockEntityData中的数据。如果有其他逻辑相关的比如自定义熔炉需要熔炉管理器来tick物品的生成与消耗，还需要在此函数中更新对应管理器的数据。
-   
+
    6. `OnCustomContainerItemDrop()`，该函数会在丢弃自定义容器中的物品的时候触发，返回False表示禁止丢弃，返回True允许丢弃前需要先更新blockEntityData中的数据。如果有其他逻辑相关的比如自定义熔炉需要熔炉管理器来tick物品的生成与消耗，还需要在此函数中更新对应管理器的数据。
 

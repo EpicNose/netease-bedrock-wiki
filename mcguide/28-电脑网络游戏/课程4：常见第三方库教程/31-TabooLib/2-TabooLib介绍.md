@@ -5,23 +5,18 @@ time: 10分钟
 ---
 
 
-# 署名
+# TabooLib介绍
 
-## 署名信息
+## 什么是TabooLib
 
-本文作者: TabooLib社区.
-TabooLib官网: [https://www.tabooproject.org/](https://www.tabooproject.org/).
-原文:  [https://taboolib.feishu.cn/wiki/Lzf8wFEsfiHclskCuGkctoUNn9b](https://taboolib.feishu.cn/wiki/Lzf8wFEsfiHclskCuGkctoUNn9b).
-特别鸣谢: 枫溪.
+TabooLib 正式创建于 2018/02/06, 为 Minecraft（Java 版）提供一个跨平台的插件开发框架    
+旨在替代频繁的操作，以及解决一些令人头疼的问题。
 
-## 相关说明
++ 基于 Kotlin 独特的语法。
++ 仅占 30+ KB 插件体积。
++ 魔术般的工具。
 
-中国版对文章部分内容有所改动.
-本文主体内容以 `TabooLib 6` 为蓝本进行教学.
+## 使用TabooLib需要什么知识？
 
-## 建议
-
-虽然`Taboolib`能够使开发者能够更快速的开发Bukkit可运行的插件.
-但是在使用之前，需要确保你已经较为熟练的掌握Bukkit基本开发思路，并且能够独立的开发一个中小型插件.
-
-> 工具库始终只是为了你开发更灵活而建设的
+1. 学会先开发Bukkit插件，了解基本原理
+2. 学会Kotlin基本语法

@@ -42,7 +42,7 @@ MC Studio是集开发者启动器、地图编辑器、关卡编辑器、逻辑�
 
 ![img](./images/studio_image004.png)
 
-除了新建地图，也可以新建空白AddOn。AddOn即为附加包，具体的解释可见[wiki](https://minecraft-zh.gamepedia.com/%E9%99%84%E5%8A%A0%E5%8C%85)，AddOn不含地图文件。
+除了新建地图，也可以新建空白AddOn。AddOn即为附加包，具体的解释可见[wiki](https://zh.minecraft.wiki/w/%E9%99%84%E5%8A%A0%E5%8C%85)，AddOn不含地图文件。
 
 目前启动器中提供了一些模板，开发者可以在模板的基础上修改，提高开发效率。模板除了地图、AddOn的分类外，还有创建方式的区别，分为“纯编辑器开发”、“脚本开发”。
 
