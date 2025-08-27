@@ -8,7 +8,7 @@
 
 | 白名单                                                | 白名单                                                | 白名单                                            |
 | ----------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------- |
-| __future__                                      | mod.server.component.actorPushableCompServer          | client.component.particleSystemCompClient         |
+| \_\_future\_\_                                            | mod.server.component.actorPushableCompServer          | client.component.particleSystemCompClient         |
 | _md5                                                  | mod.server.component.aiCommandCompServer              | client.component.particleTransComp                |
 | _random                                               | mod.server.component.attrCompServer                   | client.component.playerAnimCompClient             |
 | logging                                               | mod.server.component.auxValueCompServer               | client.component.playerCompClient                 |
@@ -157,13 +157,12 @@
 | mod.server.component.actorLootCompServer              | client.component.neteaseShopCompClient                | Preset.Model.Effect.EffectObject                  |
 | mod.server.component.actorMotionCompServer            | client.component.operationCompClient                  | Preset.Model.Effect.EffectPreset                  |
 | mod.server.component.actorOwnerCompServer             | client.component.particleControlComp                  | Preset.Model.Textboard                            |
-|                                                       | client.component.particleEntityBindComp               | Preset.Model.Textboard.TextboardObject            |
+| ast（3.3新增）                                        | client.component.particleEntityBindComp               | Preset.Model.Textboard.TextboardObject            |
 |                                                       | client.component.particleSkeletonBindComp             | Preset.Model.Textboard.TextboardPreset            |
 |                                                       |                                                       | Preset.Model.UI                                   |
 |                                                       |                                                       | Preset.Model.UI.UIPreset                          |
 |                                                       |                                                       | Preset.Controller                                 |
 |                                                       |                                                       | Preset.Controller.PresetApi                       |
-
 
 若开发者需要添加用于正常功能开发的模块白名单，请联系官方人员进行反馈，经技术评估后进行添加。
 

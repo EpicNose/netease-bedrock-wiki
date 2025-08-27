@@ -1,5 +1,5 @@
 ---
-front: 
+front:
 hard: 入门
 time: 20分钟
 ---
@@ -77,7 +77,7 @@ struct MyFloatType{
     float x;
 };
 
-MyFloatType num; 
+MyFloatType num;
 ```
 #### 运算
 在GLSL中，对向量访问的支持有多种方式，比较自由：

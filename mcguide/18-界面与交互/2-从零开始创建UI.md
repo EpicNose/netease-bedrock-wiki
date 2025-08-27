@@ -267,4 +267,3 @@ def OnUIInitFinished(self, args):
 我们利用[UI API文档](40-UIAPI文档.html)中对各个控件的接口和游戏原生支持的格式化，可以在python代码中动态的改变界面的表现，具体可以参考[样式代码](https://minecraft-zh.gamepedia.com/index.php?title=%E6%A0%B7%E5%BC%8F%E4%BB%A3%E7%A0%81&variant=zh)
 
 当然，更多API功能还需要你的发现和尝试。
-

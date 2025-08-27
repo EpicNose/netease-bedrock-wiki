@@ -1,5 +1,5 @@
 ---
-front: 
+front:
 hard: 入门
 time: 分钟
 ---
@@ -106,7 +106,7 @@ Client-Server结构分为服务器与客户端。服务器负责数据的管理�
 | ------------- | ------------------------------------------------------------ |
 | entities      | 生物的定义。<br><font color="red">在我的世界中国版中，行为包中必须有这个文件夹</font> |
 | ...           |                                                              |
-| manifest.json | 资源包的描述文件，包含了该资源包的标识符，作者信息等。<br>更多可以参考[官方wiki](https://minecraft-zh.gamepedia.com/基岩版附加包文档#manifest.json)，以及下方的“制作规范” |
+| manifest.json | 资源包的描述文件，包含了该资源包的标识符，作者信息等。<br>更多可以参考[官方wiki](https://zh.minecraft.wiki/w/基岩版附加包文档#manifest.json)，以及下方的“制作规范” |
 
 ### 资源包
 
@@ -117,12 +117,12 @@ Client-Server结构分为服务器与客户端。服务器负责数据的管理�
 | entity        | 生物的定义                                                   |
 | textures      | 贴图资源<br><font color="red">在我的世界中国版中，资源包中必须有这个文件夹</font> |
 | ...           |                                                              |
-| manifest.json | 资源包的描述文件，包含了该资源包的标识符，作者信息等。<br>更多可以参考[官方wiki](https://minecraft-zh.gamepedia.com/基岩版附加包文档#manifest.json)，以及下方的“制作规范” |
+| manifest.json | 资源包的描述文件，包含了该资源包的标识符，作者信息等。<br>更多可以参考[官方wiki](https://zh.minecraft.wiki/w/基岩版附加包文档#manifest.json)，以及下方的“制作规范” |
 
 
 ## 开始动手吧
 
-如果想更深入了解如何手动配置addon，可以阅读[制作资源附加包](https://minecraft-zh.gamepedia.com/教程/制作资源附加包)与[制作行为包](https://minecraft-zh.gamepedia.com/%E6%95%99%E7%A8%8B/%E5%88%B6%E4%BD%9C%E8%A1%8C%E4%B8%BA%E5%8C%85)。
+如果想更深入了解如何手动配置addon，可以阅读[制作资源附加包](https://zh.minecraft.wiki/w/教程/制作资源附加包)与[制作行为包](https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B/%E5%88%B6%E4%BD%9C%E8%A1%8C%E4%B8%BA%E5%8C%85)。
 
 如果想了解更多的自定义游戏内容，可以查阅“自定义游戏内容“里的文档
 

@@ -1,5 +1,5 @@
 ---
-front: 
+front:
 hard: 入门
 time: 分钟
 ---
@@ -212,7 +212,7 @@ print q.Copy()
 ```python
 from common.utils.mcmath import Matrix
 q = Matrix.Create([[1,2], [3,4]])
-q.Eye() 
+q.Eye()
 print q
 ```
 
