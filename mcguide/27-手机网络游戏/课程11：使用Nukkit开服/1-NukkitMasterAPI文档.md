@@ -13,7 +13,8 @@ NukkitMaster需要安装在Nukkit-MOT服务端中。
 
 > 需要注意: NukkitMaster是基于Nukkit-MOT分支进行开发的。Nukkit官方服务端版本无法兼容。
 
-> 如果您需要使用其他分支的Nukkit，您可以自行反编译NukkitMaster
+> 如果您需要使用其他分支的Nukkit，您可以参考NukkitMOT源码仓库修改的内容而自行修改服务端以兼容中国版的协议。  
+> 通信内容方面，您可以自行反编译NukkitMaster来兼容您的其他分支的Nukkit服务端。
 
 > NukkitMOT分支开源地址： https://github.com/MemoriesOfTime/Nukkit-MOT
 
