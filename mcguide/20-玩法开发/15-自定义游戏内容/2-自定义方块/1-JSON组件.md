@@ -168,6 +168,115 @@ time: 分钟
 
 指定语言文件键，用于映射鼠标悬停在物品栏和快捷栏中的方块物品上时显示的文本。如果给定的字符串无法解析为本地字符串，则将显示给定的原始字符串。使用需要方块行为的 `format_version`大于等于1.19.60。
 
+
+
+<span id="netease_portal"></span>
+
+### netease:portal
+
+| 键                   | 类型   | 默认值 | 解释                                                         |
+| -------------------- | ------ | ------ | ------------------------------------------------------------ |
+| particle_east_west   | string |        | 可选，对应于粒子json文件中的identifier，用于控制方块与Z轴同向时播放的粒子特效 |
+| particle_north_south | string |        | 可选，对应于粒子json文件中的identifier，用于控制方块与X轴同向时播放的粒子特效 |
+| target_dimension     | int    |        | 必须设置，用于控制进入传送门方块后到达的目标维度             |
+
+- **自定义传送门方块的base_block需要设为portal。**
+- 粒子特效应放置于`resource/particles`，粒子特效编写可参考[官方关于粒子组件的说明](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecomponentlist?view=minecraft-bedrock-stable)。
+- **目标维度为0或3-20的整数或者大于21的新版自定义维度的数值，1（下界）和2（末地）会被视作0来处理。**
+
+
+
+<span id="netease_mob_spawner"></span>
+
+### netease:mob_spawner
+
+可在netease:mob_spawner组件中设置刷怪的类型，目前支持原生生物、微软自定义生物。
+
+| 键   | 类型   | 默认值 | 解释                             |
+| ---- | ------ | ------ | -------------------------------- |
+| type | string |        | 必须设置，用于控制生成的生物类型 |
+
+- 原生生物type为"minecraft:Namespaced ID"，如"minecraft:parrot"，Namespaced ID可参考[官方wiki](https://zh.minecraft.wiki/w/%E5%9F%BA%E5%B2%A9%E7%89%88%E6%95%B0%E6%8D%AE%E5%80%BC/%E5%AE%9E%E4%BD%93ID)中各Mob的详细信息。
+- 微软自定义生物type为"minecraft:entity"中"description"的"identifier"项，可参考[自定义生物文档](../../3-自定义生物/01-自定义基础生物.md)及[CustomBlocksMod](../../../13-模组SDK编程/60-Demo示例.md#CustomBlocksMod)中的customblocks_test_mobspawner1.json。
+- 自定义刷怪箱方块的base_block需要设为mob_spawner。
+
+
+
+<span id="netease_water_destory"></span>
+
+### netease:water_destory
+
+可在netease:water_destory组件中设置是否无法摆放在水源和流水方块中，如果设置为true，会被流水摧毁。
+
+| 键    | 类型 | 默认值 | 解释                                         |
+| ----- | ---- | ------ | -------------------------------------------- |
+| value | bool |        | 必须设置，用于设置无法摆放在水源和流水方块中 |
+
+- 可以在方块的loottable中设置被水流摧毁后的掉落物
+
+
+
+<span id="netease_water_only"></span>
+
+### netease:water_only
+
+可在netease:water_only组件中设置是否必须放置在水中。
+
+| 键    | 类型 | 默认值 | 解释                                 |
+| ----- | ---- | ------ | ------------------------------------ |
+| value | bool |        | 必须设置，用于设置是否必须放在水中。 |
+
+
+
+<span id="netease_water_source"></span>
+
+### netease:water_source
+
+可在netease:water_source组件中设置是否在水源方块中表现为含水。
+
+| 键    | 类型 | 默认值 | 解释                                   |
+| ----- | ---- | ------ | -------------------------------------- |
+| value | bool |        | 必须设置，是否在水源方块中表现为含水。 |
+
+
+
+<span id="netease_water_flow_source"></span>
+
+### netease:water_flow_source
+
+可在netease:water_flow_source组件中设置是否在水源和流水方块中表现为含水。
+
+| 键    | 类型 | 默认值 | 解释                                         |
+| ----- | ---- | ------ | -------------------------------------------- |
+| value | bool |        | 必须设置，是否在水源和流水方块中表现为含水。 |
+
+
+
+<span id="netease_snow_recover_able"></span>
+
+### netease:snow_recover_able
+
+可在netease:snow_recover_able组件中设置方块是否能含雪。
+
+| 键    | 类型 | 默认值 | 解释                             |
+| ----- | ---- | ------ | -------------------------------- |
+| value | bool |        | 必须设置，用于设置方块是否能含雪 |
+
+- 目前自定义含雪方块和方块实体不兼容(包括自定义方块实体，自定义刷怪箱等)，请不要一起使用。
+
+
+<span id="netease_can_built_over"></span>
+
+### netease:can_built_over
+
+可在netease:can_built_over组件中设置在放置其他方块时，如果该位置已有含netease:can_built_over配置的方块，其他方块能否和放置在此方块中。
+
+| 键    | 类型 | 默认值 | 解释                                                         |
+| ----- | ---- | ------ | ------------------------------------------------------------ |
+| value | bool |        | 必须设置，用于设置在放置其他方块时，如果该位置已有含netease:can_built_over配置的方块，其他方块能否和放置在此方块中 |
+
+
+
 <span id="netease_tier"></span>
 
 ### netease:tier
