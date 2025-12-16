@@ -1,10 +1,3 @@
-***
-
-front:
-hard: 入门
-time: 60分钟
-----------
-
 # 通过MCSM面板管理服务器
 
 ![1.00](./res/mcsmguide/10.png)
