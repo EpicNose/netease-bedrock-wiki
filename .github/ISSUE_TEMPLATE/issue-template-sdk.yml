@@ -1,0 +1,49 @@
+name: SDK修改
+description: 一条SDK修改对应一条Issue，可以修改参数描述、接口备注等
+title: "[sdk] "
+labels: [sdk]
+body:
+  - type: textarea
+    id: sdk_name
+    attributes:
+      label: 接口名称
+      description: 请填写接口的名称
+      placeholder: |
+        例如： CreateUI
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: sdk_type
+    attributes:
+      label: 选择接口类型
+      description: 
+      options:
+        - 服务端
+        - 客户端
+        - 双端
+    validations:
+      required: true
+
+  - type: textarea
+    id: modifications
+    attributes:
+      label: 修改内容
+      description: 详细描述修改后的内容
+      placeholder: |
+        例如：
+        # 以CreateUI为例
+        1、参数修改
+        createParams的说明修改为：创建UI的参数，会传到UI类的_init_函数中，详细请看下方备注说明
+        2、备注修改
+        createParams中的bindEntityId参数描述修改为：意为绑定实体的id。若不传入该键值对或值为None，则会以isHud = 0来处理该UI界面。血量显示模组可以使用该参数。
+    validations:
+      required: true
+
+  - type: textarea
+    id: other_content
+    attributes:
+      label: 其他补充信息
+      description: 如有其他补充信息请填写在这里
+    validations:
+      required: false
