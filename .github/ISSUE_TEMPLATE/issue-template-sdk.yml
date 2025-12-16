@@ -1,4 +1,4 @@
-name: SDK修改
+name: SDK文档修改
 description: 一条SDK修改对应一条Issue，可以修改参数描述、接口备注等
 title: "[sdk] "
 labels: [sdk]
@@ -6,8 +6,8 @@ body:
   - type: textarea
     id: sdk_name
     attributes:
-      label: 接口名称
-      description: 请填写接口的名称
+      label: 接口名称/链接
+      description: 请填写接口的名称或链接
       placeholder: |
         例如： CreateUI
     validations:
@@ -16,8 +16,8 @@ body:
   - type: dropdown
     id: sdk_type
     attributes:
-      label: 选择接口类型
-      description: 
+      label: 接口类型
+      description: 接口的类型
       options:
         - 服务端
         - 客户端
