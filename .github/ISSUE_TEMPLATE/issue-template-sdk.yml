@@ -47,3 +47,11 @@ body:
       description: 如有其他补充信息请填写在这里
     validations:
       required: false
+    
+  - type: textarea
+    id: developer_info
+    attributes:
+      label: 开发者名称/联系方式
+      description: 请填写您的开发者名称或联系方式（QQ），将会用于奖励发放等
+    validations:
+      required: false
