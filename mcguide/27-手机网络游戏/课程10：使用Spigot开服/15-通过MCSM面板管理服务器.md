@@ -6,7 +6,7 @@ time: 60分钟
 
 # 通过MCSM面板管理服务器
 
-![1.00](./res/mcsmguide/10.png)
+![封面](./res/mcsmguide/10.png)
 
 ## 准备阶段
 
@@ -30,13 +30,13 @@ time: 60分钟
 
 * 网易机器禁止私自把机器交付时开放的业务端口用于其他用途，如数据库或自建服务等
 
-![1.00](./res/mcsmguide/20.png)
+![《高危操作警告说明》文档](./res/mcsmguide/20.png)
 
 ## 原理说明
 
 在网易机器部署mcsm daemon守护进程，通过自备机器协议转发SSH隧道与网易机器通信，从而达到使用mcsm面板管理网易机器。
 
-![1.00](./res/mcsmguide/30.png)
+![原理图](./res/mcsmguide/30.png)
 
 ## 操作步骤
 
@@ -68,7 +68,7 @@ npm -v
 
 从github下载压缩包（内容库也已上传）
 
-<https://gitee.com/mcsmanager/MCSManager-Daemon-Production>
+<https://github.com/MCSManager/MCSManager/releases/latest/download/mcsmanager_linux_daemon_only_release.tar.gz>
 
 ```bash
 # 创建mcsm daemon工作目录
@@ -79,8 +79,8 @@ mkdir -p ~/mcsm
 
 # 解压
 cd ~/mcsm
-unzip MCSManager-Daemon-Production-master.zip
-cd ~/mcsm/MCSManager-Daemon-Production-master
+tar -zxvf mcsmanager_linux_daemon_only_release.tar.gz
+cd ~/mcsm/mcsmanager
 
 # 设置 npm 镜像源为国内淘宝源
 npm config set registry https://registry.npmmirror.com
@@ -90,8 +90,7 @@ npm config get registry
 screen -S mcsm
 
 # 安装依赖后部署
-npm install --production
-node app.js
+sh start-daemon.sh
 ```
 
 #### 3. 检查24444端口和秘钥
@@ -181,9 +180,9 @@ netstat -tunlp | grep 24445
 
 #### 3. 配置mcsm节点
 
-![1.00](./res/mcsmguide/40.png)
+![节点位置](./res/mcsmguide/40.png)
 
-![1.00](./res/mcsmguide/50.png)
+![节点配置](./res/mcsmguide/50.png)
 
 这里的“远程节点秘钥”请替换为网易机器守护进程输出的key秘钥。
 
@@ -211,6 +210,12 @@ netstat -tunlp | grep 24445
 
 按照此方法，在不同机器上配置mcsm daemon守护进程，配置多个SSH隧道协议转发，然后新增节点即可。
 
+③ mcsm面板传输文件出现错误
+
+显示network error
+
+解决方法：升级daemon为最新版，不要使用3.x的版本
+
 ## 特别鸣谢
 
 
@@ -226,7 +231,6 @@ MCSM常见问题解答：混合、封神、MuFeng、西瓜、星汉
 
 调试与测试：千阙云庭服务器团队、初云杯服务器团队、风之谷服务器团队
 
-<br />
 
 如您在操作过程中有困难，欢迎您随时联系我们\~
 
