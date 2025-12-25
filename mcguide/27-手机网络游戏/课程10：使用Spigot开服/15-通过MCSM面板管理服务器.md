@@ -1,9 +1,3 @@
----
-front:
-hard: 入门
-time: 60分钟
----
-
 # 通过MCSM面板管理服务器
 
 ![封面](./res/mcsmguide/10.png)
@@ -44,17 +38,19 @@ time: 60分钟
 
 #### 1. 无root安装node.js
 
+**强制要求安装node16+的版本，不然守护进程跑不起来**
+
 ```bash
 # 下载nodejs
 cd ~/downloads
-wget https://nodejs.org/dist/v15.7.0/node-v15.7.0-linux-x64.tar.xz
+wget https://nodejs.org/dist/v16.20.2/node-v16.20.2-linux-x64.tar.xz
 
 # 创建工作目录并解压
-mkdir -p ~/apps/node-v15.7.0
-tar -xJf node-v15.7.0-linux-x64.tar.xz --no-wildcards-match-slash --anchored --exclude */CHANGELOG.md --exclude */LICENSE --exclude */README.md  --strip 1 -C ~/apps/node-v15.7.0
+mkdir -p ~/apps/node-v16.20.2
+tar -xJf node-v16.20.2-linux-x64.tar.xz --no-wildcards-match-slash --anchored --exclude */CHANGELOG.md --exclude */LICENSE --exclude */README.md  --strip 1 -C ~/apps/node-v16.20.2
 
 # 添加path变量
-export PATH=~/apps/node-v15.7.0/bin:$PATH
+export PATH=~/apps/node-v16.20.2/bin:$PATH
 source ~/.bashrc
 
 # 检查nodejs版本
