@@ -1,4 +1,21 @@
 {
   "projectName": "netease-bedrock-wiki",
-  "projectOwner": "MCNeteaseDevs"
+  "projectOwner": "MCNeteaseDevs",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "MCNeteaseDevs",
+      "name": "MCNeteaseDevs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186891705?v=4",
+      "profile": "https://github.com/MCNeteaseDevs",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ]
 }
