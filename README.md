@@ -61,3 +61,15 @@ git push --set-upstream origin your-branch-name
 
 
 
+## 致谢
+
+在此感谢以下开发者作出的贡献
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
