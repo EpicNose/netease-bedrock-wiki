@@ -63,7 +63,7 @@ git push --set-upstream origin your-branch-name
 
 ## 致谢
 
-在此感谢以下开发者作出的贡献
+在此感谢以下开发者作出的贡献（以下排名不分先后）
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
