@@ -72,6 +72,7 @@ git push --set-upstream origin your-branch-name
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MCNeteaseDevs"><img src="https://avatars.githubusercontent.com/u/186891705?v=4?s=100" width="100px;" alt="MCNeteaseDevs"/><br /><sub><b>MCNeteaseDevs</b></sub></a><br /><a href="#doc-MCNeteaseDevs" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sevenstars0"><img src="https://avatars.githubusercontent.com/u/148792757?v=4?s=100" width="100px;" alt="sevenstars"/><br /><sub><b>sevenstars</b></sub></a><br /><a href="#doc-sevenstars0" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/LiangJi23333"><img src="https://avatars.githubusercontent.com/u/102958768?v=4?s=100" width="100px;" alt="LiangJi23333"/><br /><sub><b>LiangJi23333</b></sub></a><br /><a href="#doc-LiangJi23333" title="Documentation">📖</a></td>
     </tr>
   </tbody>
