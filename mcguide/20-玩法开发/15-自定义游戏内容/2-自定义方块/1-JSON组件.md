@@ -38,8 +38,7 @@ time: 分钟
 | ----------------------- | ---- | ------ | ------------------------------------------------------------ |
 | identifier              | str  |        | 包括命名空间及物品名。需要全局唯一。建议使用mod名称作为命名空间 |
 | register_to_create_menu | bool | false  | 是否注册到创造栏                                             |
-| category                | str  | Nature | 注册到创造栏的分类，可选的值有：<br/>Construction<br/>Nature<br/>Equipment<br/>Items<br/>None |
-| base_block              | str  |        | 继承的特殊方块类型，可选的值有：<br/>mob_spawner 自定义刷怪箱<br/>portal 自定义传送门<br/>custom_crop_block 自定义农作物<br/>custom_heavy_block 自定义重力方块<br/>liquid 自定义静态流体方块<br/>flowing_liquid 自定义动态流体方块<br/>netease_container 自定义容器 |
+| category                | str  | Nature | 注册到创造栏的分类，可选的值有：<br/>Construction<br/>Nature<br/>Equipment<br/>Items |
 
 ## components
 
@@ -122,7 +121,7 @@ time: 分钟
 
 ### minecraft:destructible_by_explosion
 
-可用于控制爆炸抗性。原版方块的爆炸抗性见[官方wiki](https://minecraft-zh.gamepedia.com/%E7%88%86%E7%82%B8#.E7.88.86.E7.82.B8.E6.8A.97.E6.80.A7)
+可用于控制挖掘所需的时间。该值的含义与[官方wiki](https://minecraft-zh.gamepedia.com/%E6%8C%96%E6%8E%98#.E6.96.B9.E5.9D.97.E7.A1.AC.E5.BA.A6)的“硬度”一致
 
 - 如果设置为 `true`，方块会采用默认的爆炸抗性。
 - 如果设置为 `false`，方块将不可被爆炸破坏。
@@ -197,7 +196,7 @@ time: 分钟
 | type | string |        | 必须设置，用于控制生成的生物类型 |
 
 - 原生生物type为"minecraft:Namespaced ID"，如"minecraft:parrot"，Namespaced ID可参考[官方wiki](https://zh.minecraft.wiki/w/%E5%9F%BA%E5%B2%A9%E7%89%88%E6%95%B0%E6%8D%AE%E5%80%BC/%E5%AE%9E%E4%BD%93ID)中各Mob的详细信息。
-- 微软自定义生物type为"minecraft:entity"中"description"的"identifier"项，可参考[自定义生物文档](../../3-自定义生物/01-自定义基础生物.md)及[CustomBlocksMod](../../../13-模组SDK编程/60-Demo示例.md#CustomBlocksMod)中的customblocks_test_mobspawner1.json。
+- 微软自定义生物type为"minecraft:entity"中"description"的"identifier"项，可参考[自定义生物文档](../3-自定义生物/01-自定义基础生物.md)及[CustomBlocksMod](../../13-模组SDK编程/60-Demo示例.md#CustomBlocksMod)中的customblocks_test_mobspawner1.json。
 - 自定义刷怪箱方块的base_block需要设为mob_spawner。
 
 
@@ -213,7 +212,6 @@ time: 分钟
 | value | bool |        | 必须设置，用于设置无法摆放在水源和流水方块中 |
 
 - 可以在方块的loottable中设置被水流摧毁后的掉落物
-- 当**base_block**字段为**custom_crop_block**的时候，会自动注册此组件，无需再次注册。
 
 
 
@@ -332,9 +330,9 @@ time: 分钟
 
 主要用于[多面向](./2-功能.md#duomianxiang)的功能
 
-| 键   | 类型   | 默认值 | 解释                                                |
-| ---- | ------ | ------ | --------------------------------------------------- |
-| type | string |        | direction：四面向方块，facing_direction：六面向方块 |
+| 键   | 类型   | 默认值 | 解释                                                  |
+| ---- | ------ | ------ | ----------------------------------------------------- |
+| type | string |        | direction：四面向方块facing_direction：六面向方块 |
 
 <span id="netease:fuel "></span>
 
