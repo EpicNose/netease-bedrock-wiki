@@ -8,6 +8,10 @@ on:
     tags:
       - 'sync-*'
 
+# 授予写入权限
+permissions:
+  contents: write
+
 jobs:
   push-code:
     runs-on: ubuntu-latest
